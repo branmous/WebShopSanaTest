@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Domain.Contracts.ProductContract>
+
+@{
+    ViewBag.Title = "Products";
+}
+
+
+
+<section id="testimonials" class="testimonials">
+    <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+            <h2>@ViewBag.Title</h2>
+            <p>All the products</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel" data-aos="fade-up">
+            @foreach (var item in Model)
+            {
+                <div class="testimonial-item">
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        @item.Description
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                    <h3>@string.Format("{0:C2}", item.Price)</h3>
+                    <h4>@item.ProductNumber</h4>
+                </div>
+            }
+
+        </div>
+
+    </div>
+</section><!-- End Testimonials Section -->
+

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Product Success";
+}
+
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+            <h2>@ViewBag.Title</h2>
+            <p>Information of product</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+            <div class="col-lg-6 pt-4 pt-lg-0">
+                <p>
+                    @ViewBag.Message
+                </p>
+                @Html.ActionLink("Go to Products", "Index")
+            </div>
+        </div>
+
+    </div>
+</section><!-- End About Section -->
